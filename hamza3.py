@@ -1,7 +1,8 @@
 #ÖDEV 1
-"""
+
 yas = int(input("Yaşınızı giriniz:" ))
-cinsiyet = input("Cinsiyetinizi giriniz: ")
+cinsiyet_bilgisi = input("Cinsiyetinizi giriniz: ")
+cinsiyet = cinsiyet_bilgisi.lstrip().rstrip().replace("İ", "i").replace("I", "ı").lower()
 if cinsiyet == "erkek":
     if yas > 18:
         print("Askere gidebilirsiniz.")
@@ -11,7 +12,7 @@ elif cinsiyet == "kadın":
     print("Kadın olduğunuz için askere gidemezsiniz.")
 else:
     print("Hatalı cinsiyet girdiniz.")
-"""
+
 
 
 
@@ -29,13 +30,4 @@ elif gun.isalpha() == False:  #Kullanıcıyı hatalı yazımından dolayı uyarm
     print("Sadece harf kullanınız.")
 else:
     print("Hatalı gün girdiniz.")
-
-
-
-
-
-
-
-
-
 
